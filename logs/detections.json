@@ -1,0 +1,548 @@
+[
+  {
+    "timestamp": "2025-12-24T11:52:01.718182",
+    "image": "20251224_115201_lampu-hijau-24-_jpg.rf.53327f759e404036a88d538f1dc52c58_sign0_normal.jpg",
+    "processing_time": 0.56,
+    "total_signs": 1,
+    "results": [
+      {
+        "bbox": [
+          0,
+          2,
+          195,
+          367
+        ],
+        "type": "green_light",
+        "detection_conf": 0.9759356379508972,
+        "condition": "normal",
+        "condition_conf": 1.0,
+        "color": "#10b981"
+      }
+    ]
+  },
+  {
+    "timestamp": "2025-12-24T11:53:06.216423",
+    "image": "20251224_115305_стоп_поврежден.jpg",
+    "processing_time": 0.27,
+    "total_signs": 1,
+    "results": [
+      {
+        "bbox": [
+          117,
+          192,
+          233,
+          357
+        ],
+        "type": "do_not_stop",
+        "detection_conf": 0.712297260761261,
+        "condition": "damaged",
+        "condition_conf": 0.8874600529670715,
+        "color": "#ef4444"
+      }
+    ]
+  },
+  {
+    "timestamp": "2025-12-24T11:53:43.367923",
+    "image": "20251224_115343_знак.jpg",
+    "processing_time": 0.31,
+    "total_signs": 1,
+    "results": [
+      {
+        "bbox": [
+          141,
+          37,
+          523,
+          422
+        ],
+        "type": "stop",
+        "detection_conf": 0.9629603028297424,
+        "condition": "damaged",
+        "condition_conf": 0.9995895028114319,
+        "color": "#ef4444"
+      }
+    ]
+  },
+  {
+    "timestamp": "2025-12-24T11:53:54.054361",
+    "image": "20251224_115353_парковка.png",
+    "processing_time": 0.29,
+    "total_signs": 0,
+    "results": []
+  },
+  {
+    "timestamp": "2025-12-24T11:54:27.639511",
+    "image": "20251224_115427_lampu-hijau-4-_jpg_dirty.jpg",
+    "processing_time": 0.26,
+    "total_signs": 1,
+    "results": [
+      {
+        "bbox": [
+          81,
+          54,
+          237,
+          267
+        ],
+        "type": "green_light",
+        "detection_conf": 0.9306946992874146,
+        "condition": "dirty",
+        "condition_conf": 0.9999898672103882,
+        "color": "#f59e0b"
+      }
+    ]
+  },
+  {
+    "timestamp": "2025-12-24T11:59:21.386024",
+    "image": "20251224_115921_i4_jpg.rf.038b3cf3aa575c33d12b6ee89335e91e_dirty.jpg",
+    "processing_time": 0.36,
+    "total_signs": 1,
+    "results": [
+      {
+        "bbox": [
+          202,
+          22,
+          315,
+          171
+        ],
+        "type": "stop",
+        "detection_conf": 0.9460405707359314,
+        "condition": "normal",
+        "condition_conf": 0.9971632361412048,
+        "color": "#10b981"
+      }
+    ]
+  },
+  {
+    "timestamp": "2025-12-24T11:59:38.638202",
+    "image": "20251224_115938_lampu-hijau-4-_jpg_damaged.jpg",
+    "processing_time": 0.24,
+    "total_signs": 1,
+    "results": [
+      {
+        "bbox": [
+          84,
+          51,
+          231,
+          288
+        ],
+        "type": "green_light",
+        "detection_conf": 0.857268214225769,
+        "condition": "damaged",
+        "condition_conf": 0.9993776679039001,
+        "color": "#ef4444"
+      }
+    ]
+  },
+  {
+    "timestamp": "2025-12-24T12:00:02.415036",
+    "image": "20251224_120002_lampu-hijau-33-_jpg_dirty.jpg",
+    "processing_time": 0.26,
+    "total_signs": 1,
+    "results": [
+      {
+        "bbox": [
+          122,
+          16,
+          180,
+          292
+        ],
+        "type": "green_light",
+        "detection_conf": 0.9500922560691833,
+        "condition": "normal",
+        "condition_conf": 0.9947100877761841,
+        "color": "#10b981"
+      }
+    ]
+  },
+  {
+    "timestamp": "2025-12-24T12:00:13.912773",
+    "image": "20251224_120013_lampu-hijau-1-_jpg_damaged.jpg",
+    "processing_time": 0.25,
+    "total_signs": 1,
+    "results": [
+      {
+        "bbox": [
+          110,
+          26,
+          235,
+          279
+        ],
+        "type": "green_light",
+        "detection_conf": 0.9204302430152893,
+        "condition": "damaged",
+        "condition_conf": 0.9999998807907104,
+        "color": "#ef4444"
+      }
+    ]
+  },
+  {
+    "timestamp": "2025-12-24T12:01:10.182067",
+    "image": "20251224_120109_202632_jpg.rf.2061d1610eb62513dc0b504df95941b8_damaged.jpg",
+    "processing_time": 0.25,
+    "total_signs": 1,
+    "results": [
+      {
+        "bbox": [
+          223,
+          146,
+          419,
+          348
+        ],
+        "type": "ped_crossing",
+        "detection_conf": 0.9559052586555481,
+        "condition": "damaged",
+        "condition_conf": 0.9651615619659424,
+        "color": "#ef4444"
+      }
+    ]
+  },
+  {
+    "timestamp": "2025-12-24T12:04:29.698259",
+    "image": "20251224_120429_182712481_jpg.rf.0a367d52ace37ca5d84467e1ce9ed9f2_dirty.jpg",
+    "processing_time": 0.3,
+    "total_signs": 1,
+    "results": [
+      {
+        "bbox": [
+          213,
+          122,
+          471,
+          309
+        ],
+        "type": "do_not_stop",
+        "detection_conf": 0.6773535013198853,
+        "condition": "damaged",
+        "condition_conf": 0.9787753820419312,
+        "color": "#ef4444"
+      }
+    ]
+  },
+  {
+    "timestamp": "2025-12-24T12:04:44.710509",
+    "image": "20251224_120444_i2_jpg.rf.0e41c5c7fa9f9cd052d9b0c38490a2cb_dirty.jpg",
+    "processing_time": 0.14,
+    "total_signs": 0,
+    "results": []
+  },
+  {
+    "timestamp": "2025-12-24T12:05:26.978570",
+    "image": "20251224_120526_perintah-pilihan-memasuki-salah-satu-jalur-59-_jpg_damaged.jpg",
+    "processing_time": 0.18,
+    "total_signs": 0,
+    "results": []
+  },
+  {
+    "timestamp": "2025-12-24T12:05:38.122347",
+    "image": "20251224_120537_71e13edd1d4ad095da38747a0b280eda_jpg.rf.0bc2f20e1a2d051a3c1344c5e3c6242b_dirty.jpg",
+    "processing_time": 0.16,
+    "total_signs": 0,
+    "results": []
+  },
+  {
+    "timestamp": "2025-12-24T12:05:46.216561",
+    "image": "20251224_120545_-211958205_jpg.rf.7622d54afa05babd3683e509f55820e6_damaged.jpg",
+    "processing_time": 0.23,
+    "total_signs": 1,
+    "results": [
+      {
+        "bbox": [
+          83,
+          51,
+          303,
+          417
+        ],
+        "type": "stop",
+        "detection_conf": 0.8888600468635559,
+        "condition": "damaged",
+        "condition_conf": 0.9870486855506897,
+        "color": "#ef4444"
+      }
+    ]
+  },
+  {
+    "timestamp": "2025-12-24T12:08:11.286029",
+    "image": "20251224_120811_larangan-parkir-24-_jpg_normal.jpg",
+    "processing_time": 0.22,
+    "total_signs": 1,
+    "results": [
+      {
+        "bbox": [
+          96,
+          50,
+          207,
+          209
+        ],
+        "type": "no_parking",
+        "detection_conf": 0.9573100209236145,
+        "condition": "normal",
+        "condition_conf": 0.9999997615814209,
+        "color": "#10b981"
+      }
+    ]
+  },
+  {
+    "timestamp": "2025-12-24T12:30:11.255188",
+    "image": "20251224_123010_542a515s-960_jpg.rf.13686e037a39f9aa9bcb2b8e5d4a4751_damaged.jpg",
+    "processing_time": 0.33,
+    "total_signs": 0,
+    "results": []
+  },
+  {
+    "timestamp": "2025-12-24T12:30:39.188881",
+    "image": "20251224_123038_peringatan-simpang-tiga-sisi-kiri-20-_jpg_normal.jpg",
+    "processing_time": 0.31,
+    "total_signs": 1,
+    "results": [
+      {
+        "bbox": [
+          98,
+          67,
+          197,
+          229
+        ],
+        "type": "t_intersection_l",
+        "detection_conf": 0.9546180963516235,
+        "condition": "normal",
+        "condition_conf": 0.9999997615814209,
+        "color": "#10b981"
+      }
+    ]
+  },
+  {
+    "timestamp": "2025-12-24T12:32:07.488392",
+    "image": "20251224_123207_тестовая картинка.jpg",
+    "processing_time": 0.24,
+    "total_signs": 0,
+    "results": []
+  },
+  {
+    "timestamp": "2025-12-24T12:32:21.301356",
+    "image": "20251224_123221_202632_jpg.rf.2061d1610eb62513dc0b504df95941b8_damaged.jpg",
+    "processing_time": 0.2,
+    "total_signs": 1,
+    "results": [
+      {
+        "bbox": [
+          223,
+          146,
+          419,
+          348
+        ],
+        "type": "ped_crossing",
+        "detection_conf": 0.9559052586555481,
+        "condition": "damaged",
+        "condition_conf": 0.9651615619659424,
+        "color": "#ef4444"
+      }
+    ]
+  },
+  {
+    "timestamp": "2025-12-24T12:32:30.797311",
+    "image": "20251224_123230_lampu-hijau-1-_jpg_damaged.jpg",
+    "processing_time": 0.28,
+    "total_signs": 1,
+    "results": [
+      {
+        "bbox": [
+          110,
+          26,
+          235,
+          279
+        ],
+        "type": "green_light",
+        "detection_conf": 0.9204302430152893,
+        "condition": "damaged",
+        "condition_conf": 0.9999998807907104,
+        "color": "#ef4444"
+      }
+    ]
+  },
+  {
+    "timestamp": "2025-12-24T12:32:46.668767",
+    "image": "20251224_123246_larangan-belok-kiri-44-_jpg_normal.jpg",
+    "processing_time": 0.27,
+    "total_signs": 1,
+    "results": [
+      {
+        "bbox": [
+          96,
+          50,
+          226,
+          202
+        ],
+        "type": "do_not_turn_l",
+        "detection_conf": 0.9581189155578613,
+        "condition": "normal",
+        "condition_conf": 0.9999850988388062,
+        "color": "#10b981"
+      }
+    ]
+  },
+  {
+    "timestamp": "2025-12-24T12:32:55.366370",
+    "image": "20251224_123255_larangan-berjalan-terus-wajib-berhenti-sesaat-12-_jpg_dirty.jpg",
+    "processing_time": 0.19,
+    "total_signs": 1,
+    "results": [
+      {
+        "bbox": [
+          83,
+          43,
+          189,
+          181
+        ],
+        "type": "stop",
+        "detection_conf": 0.9668933153152466,
+        "condition": "dirty",
+        "condition_conf": 0.9918904304504395,
+        "color": "#f59e0b"
+      }
+    ]
+  },
+  {
+    "timestamp": "2025-12-24T12:33:10.327892",
+    "image": "20251224_123310_lampu-hijau-2-_jpg_damaged.jpg",
+    "processing_time": 0.12,
+    "total_signs": 0,
+    "results": []
+  },
+  {
+    "timestamp": "2025-12-24T12:34:12.099604",
+    "image": "20251224_123411_5k8BTxrXFW8_jpg.rf.4771cee55e3e3ba45e710af61ecbb719_damaged.jpg",
+    "processing_time": 0.2,
+    "total_signs": 0,
+    "results": []
+  },
+  {
+    "timestamp": "2025-12-24T12:34:25.473163",
+    "image": "20251224_123425_image.jpg",
+    "processing_time": 0.21,
+    "total_signs": 1,
+    "results": [
+      {
+        "bbox": [
+          84,
+          20,
+          432,
+          346
+        ],
+        "type": "do_not_stop",
+        "detection_conf": 0.5378180146217346,
+        "condition": "damaged",
+        "condition_conf": 0.9999580383300781,
+        "color": "#ef4444"
+      }
+    ]
+  },
+  {
+    "timestamp": "2025-12-24T12:34:52.213518",
+    "image": "20251224_123452_400865117018dcd4d162a81e0f79e0a0dd355026e3_b_jpg.rf.34c88b07aebbc1dd1e5290f3cd654749_damaged.jpg",
+    "processing_time": 0.2,
+    "total_signs": 0,
+    "results": []
+  },
+  {
+    "timestamp": "2025-12-24T12:35:02.096317",
+    "image": "20251224_123501_i_jpg.rf.038fe5c39a4b782d532bb48a968ab035_dirty.jpg",
+    "processing_time": 0.12,
+    "total_signs": 0,
+    "results": []
+  },
+  {
+    "timestamp": "2025-12-24T12:35:14.007605",
+    "image": "20251224_123513_9b9da043b842481256e50893263af3d7_jpg.rf.8564b19efc0d8ae64c1b860278289740_dirty.jpg",
+    "processing_time": 0.14,
+    "total_signs": 0,
+    "results": []
+  },
+  {
+    "timestamp": "2025-12-24T12:35:32.188919",
+    "image": "20251224_123532_ad450759c22c14809476479ca3bdd6b9_jpg.rf.b999135afaef40678cd64ba35adbe232_dirty.jpg",
+    "processing_time": 0.15,
+    "total_signs": 0,
+    "results": []
+  },
+  {
+    "timestamp": "2025-12-24T12:35:50.678283",
+    "image": "20251224_123550_peringatan-alat-pemberi-isyarat-lalu-lintas-76-_jpg_dirty.jpg",
+    "processing_time": 0.25,
+    "total_signs": 1,
+    "results": [
+      {
+        "bbox": [
+          101,
+          66,
+          223,
+          220
+        ],
+        "type": "traffic_light",
+        "detection_conf": 0.9629794359207153,
+        "condition": "dirty",
+        "condition_conf": 0.9943671822547913,
+        "color": "#f59e0b"
+      }
+    ]
+  },
+  {
+    "timestamp": "2025-12-24T12:38:28.821188",
+    "image": "20251224_123828_20251224_120545_-211958205_jpg.rf.7622d54afa05babd3683e509f55820e6_damaged.jpg",
+    "processing_time": 0.36,
+    "total_signs": 1,
+    "results": [
+      {
+        "bbox": [
+          83,
+          51,
+          303,
+          417
+        ],
+        "type": "stop",
+        "detection_conf": 0.8888600468635559,
+        "condition": "damaged",
+        "condition_conf": 0.9870486855506897,
+        "color": "#ef4444"
+      }
+    ]
+  },
+  {
+    "timestamp": "2025-12-24T12:39:18.930579",
+    "image": "20251224_123918_larangan-memutar-balik-20-_jpg.rf.9387ab3acff765c16b152021aea4b38e_sign0_normal.jpg",
+    "processing_time": 0.27,
+    "total_signs": 1,
+    "results": [
+      {
+        "bbox": [
+          1,
+          2,
+          120,
+          159
+        ],
+        "type": "do_not_u_turn",
+        "detection_conf": 0.9562504887580872,
+        "condition": "normal",
+        "condition_conf": 1.0,
+        "color": "#10b981"
+      }
+    ]
+  },
+  {
+    "timestamp": "2025-12-24T12:40:46.844331",
+    "image": "20251224_124046_image.jpg",
+    "processing_time": 0.29,
+    "total_signs": 1,
+    "results": [
+      {
+        "bbox": [
+          59,
+          56,
+          144,
+          128
+        ],
+        "type": "ped_crossing",
+        "detection_conf": 0.8837328553199768,
+        "condition": "normal",
+        "condition_conf": 0.9999929666519165,
+        "color": "#10b981"
+      }
+    ]
+  }
+]

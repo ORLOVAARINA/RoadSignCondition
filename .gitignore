@@ -1,0 +1,16 @@
+.idea
+data/
+models/
+state_dataset/
+data_preparation_model_training/
+app/logs/
+app/static/
+*.log
+runs/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+venv/
+*.env
+*.env.*

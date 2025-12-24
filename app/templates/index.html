@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Анализатор дорожных знаков</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .hero-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 5rem 0;
+            margin-bottom: 3rem;
+        }
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            transition: transform 0.3s;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        .stats-card {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            border: none;
+        }
+        .condition-badge {
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 0.85em;
+        }
+        .condition-normal { background: #d1fae5; color: #065f46; }
+        .condition-damaged { background: #fee2e2; color: #991b1b; }
+        .condition-dirty { background: #fef3c7; color: #92400e; }
+    </style>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+</head>
+<body>
+    <!-- Навигация -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="/">
+                <i class="bi bi-signpost-split me-2"></i>Анализатор знаков
+            </a>
+            <div class="navbar-nav">
+                <a class="nav-link" href="/">Главная</a>
+                <a class="nav-link" href="/detect">Детекция</a>
+                <a class="nav-link" href="/logs">Логи</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Герой-секция -->
+    <div class="hero-section">
+        <div class="container text-center">
+            <h1 class="display-4 mb-4">AI-анализ дорожных знаков</h1>
+            <p class="lead mb-4">Обнаружение, классификация и оценка состояния дорожных знаков</p>
+            <a href="/detect" class="btn btn-light btn-lg">
+                <i class="bi bi-camera me-2"></i>Начать анализ
+            </a>
+        </div>
+    </div>
+
+    <!-- Функциональность -->
+    <div class="container">
+        <div class="row g-4 mb-5">
+            <div class="col-md-4">
+                <div class="card h-100 text-center card-hover">
+                    <div class="card-body">
+                        <div class="feature-icon"><i class="bi bi-search text-primary"></i></div>
+                        <h3>Детекция</h3>
+                        <p>Обнаружение дорожных знаков на изображениях с помощью YOLOv8</p>
+                        <a href="/detect" class="btn btn-primary">
+                            <i class="bi bi-cloud-arrow-up me-2"></i>Загрузить изображение
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card h-100 text-center card-hover">
+                    <div class="card-body">
+                        <div class="feature-icon"><i class="bi bi-clipboard-check text-success"></i></div>
+                        <h3>Классификация</h3>
+                        <p>Определение состояния знаков: нормальный, поврежденный, загрязненный</p>
+                        <div class="mt-3">
+                            <span class="badge condition-normal me-1">Нормальный</span>
+                            <span class="badge condition-damaged me-1">Поврежденный</span>
+                            <span class="badge condition-dirty">Загрязненный</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card h-100 text-center card-hover">
+                    <div class="card-body">
+                        <div class="feature-icon"><i class="bi bi-clock-history text-info"></i></div>
+                        <h3>История</h3>
+                        <p>Просмотр истории всех проведенных анализов и результатов</p>
+                        <a href="/logs" class="btn btn-primary">
+                            <i class="bi bi-journal-text me-2"></i>Смотреть логи
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Статистика -->
+        <div class="row mb-5">
+            <div class="col-12">
+                <div class="card stats-card">
+                    <div class="card-body text-center">
+                        <h2>Статистика системы</h2>
+                        <div class="row mt-4">
+                            <div class="col-md-3">
+                                <h4>{{ total_logs or 0 }}</h4>
+                                <p>Всего проверок</p>
+                            </div>
+                            <div class="col-md-3">
+                                <h4>21</h4>
+                                <p>Типов знаков</p>
+                            </div>
+                            <div class="col-md-3">
+                                <h4>3</h4>
+                                <p>Состояния</p>
+                            </div>
+                            <div class="col-md-3">
+                                <h4>94%</h4>
+                                <p>Точность</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Последняя проверка -->
+        {% if last_log %}
+        <div class="card mb-5">
+            <div class="card-header bg-primary text-white">
+                <h5 class="mb-0"><i class="bi bi-arrow-clockwise me-2"></i>Последняя проверка</h5>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-6">
+                        <p><strong><i class="bi bi-calendar-event me-2"></i>Время:</strong>
+                           {{ last_log.timestamp[:19].replace('T', ' ') }}</p>
+                        <p><strong><i class="bi bi-image me-2"></i>Файл:</strong> {{ last_log.image }}</p>
+                    </div>
+                    <div class="col-md-6">
+                        <p><strong><i class="bi bi-signpost me-2"></i>Знаков найдено:</strong> {{ last_log.total_signs }}</p>
+                        <p><strong><i class="bi bi-stopwatch me-2"></i>Время обработки:</strong> {{ last_log.processing_time }} сек</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endif %}
+
+        <!-- Технологии -->
+        <div class="card mb-5">
+            <div class="card-header">
+                <h5 class="mb-0"><i class="bi bi-cpu me-2"></i>Технологии проекта</h5>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-3 text-center mb-3">
+                        <i class="bi bi-search fs-1 text-primary mb-2 d-block"></i>
+                        <h6>YOLOv8</h6>
+                        <small class="text-muted">Детекция объектов</small>
+                    </div>
+                    <div class="col-md-3 text-center mb-3">
+                        <i class="bi bi-diagram-3 fs-1 text-success mb-2 d-block"></i>
+                        <h6>ResNet50</h6>
+                        <small class="text-muted">Классификация</small>
+                    </div>
+                    <div class="col-md-3 text-center mb-3">
+                        <i class="bi bi-lightning fs-1 text-warning mb-2 d-block"></i>
+                        <h6>FastAPI</h6>
+                        <small class="text-muted">Веб-сервер</small>
+                    </div>
+                    <div class="col-md-3 text-center mb-3">
+                        <i class="bi bi-palette fs-1 text-info mb-2 d-block"></i>
+                        <h6>Bootstrap 5</h6>
+                        <small class="text-muted">Интерфейс</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Подвал -->
+    <footer class="bg-dark text-white py-4 mt-5">
+        <div class="container text-center">
+            <p><i class="bi bi-c-circle me-1"></i>2025 Анализатор дорожных знаков</p>
+            <p class="text-muted small">Система компьютерного зрения на основе YOLOv8 и ResNet50</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
