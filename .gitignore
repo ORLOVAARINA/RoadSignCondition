@@ -3,8 +3,9 @@ data/
 models/
 state_dataset/
 data_preparation_model_training/
-app/logs/
+logs/
 app/static/
+app/__init__.py
 *.log
 runs/
 __pycache__/
